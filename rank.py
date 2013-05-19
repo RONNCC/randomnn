@@ -11,9 +11,9 @@ root = os.getcwd()
 has = root+'/has'
 noth = root+'/not'
 test = root+ '/test'
-size=300
+size=400
 ds = SupervisedDataSet(size,1)
-net = buildNetwork(size,size/2,size/4,size/8,size/16,size/32,1)
+net = buildNetwork(size,size/2,size/3,size/4,1)
 #print net.activate([2,1])
 
 #hot
@@ -33,7 +33,7 @@ def make_input(f):
 
 for haspath in os.listdir(has):
     f = np.ravel(imread(has+'/'+haspath))
-    ds.addSample(make_input(f),(1,))    
+    ds.addSample(make_input(f),(100,))    
 for notpath in os.listdir(noth):
     f = np.ravel(imread(noth+'/'+notpath))
     ds.addSample(make_input(f),(0,))    
@@ -41,7 +41,7 @@ print 'added pictures'
 
 trainer = BackpropTrainer(net,ds)
 print 'testing'
-for x in range(5):
+for x in range(10):
     print x,trainer.train()
 
 print 'scoring'
