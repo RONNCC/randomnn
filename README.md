@@ -12,3 +12,7 @@ well what did you expect?
 nothing - using just a plain neural net without any feature vectors and 
 arbitrary rescaling of the images themselves is a bad idea. So this is
 just an example of using PyBrain I guess?
+
+
+ok I need many many more pictures + cpu's :P 
+http://www.nytimes.com/2012/06/26/technology/in-a-big-network-of-computers-evidence-of-machine-learning.html?pagewanted=all
